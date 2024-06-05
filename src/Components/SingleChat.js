@@ -27,7 +27,7 @@ function SingleChat({ setFetchAgain, fetchAgain }) {
   const {  selectedChat, setSelectedChat, notification, setNotification, setNewMessage, newMessage } = ChatState();
 
 
-const userData = localStorage.getItem('user')
+const userData = localStorage.getItem('user')  
 
 
 
