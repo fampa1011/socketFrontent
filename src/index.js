@@ -1,13 +1,23 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react';
+import ChatProvider from './Context/ChatProvider'; // Update this with the correct path to your ChatProvider component
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider>
+      <BrowserRouter>
+        <ChatProvider> {/* Wrap the App component with ChatProvider */}
+          <App />
+        </ChatProvider>
+      </BrowserRouter>
+    </ChakraProvider>
   </React.StrictMode>
 );
 
