@@ -18,7 +18,7 @@ var socket, selectedChatCompare;
 function SingleChat({ setFetchAgain, fetchAgain }) {
 
   const [messages, setMessages] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);  
   const [socketConnected, setSocketConnected] = useState(false);
   const [typing, setTyping] = useState(false);
   const [istyping, setIsTyping] = useState(null); // Change to store the room ID
